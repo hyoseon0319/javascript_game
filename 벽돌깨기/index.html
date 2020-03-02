@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>벽돌 깨기</title>
-    <link rel="stylesheet" href="break.css">
-
+    <style>
+        * {
+          padding: 0;
+          margin: 0;
+        }
+    
+        canvas {
+          background: #eee;
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    <link rel="stylesheet" href="break.css" type="text/css" />
+  
 </head>
-<body>
-        <h1>벽돌깨기</h1>
-<div class="start">
-    <input type=button value="게임시작" onclick="startGame()">
-</div>    
 
+<body>
+    <div id="titleWrap">
+        <h1>벽돌깨기</h1>
+    </div>
+    <div id="startWrap">
+        <input type=button value="게임시작" onclick="startGame()">
+    </div>
+        <canvas id="myCanvas" style="visibility:hidden" width="480" height="320"></canvas>
+        <script src="break.js" ></script>
 </body>
+
 </html>

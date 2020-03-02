@@ -1,43 +1,40 @@
-@import url('https://fonts#googleapis#com/css?family=Jua&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
 
 /* 게임 시작 화면 */
 body {
-    background-color: #f4eeff;
+    background-color: #ABD0CE;
     overflow: hidden;
 }
 
 
-body, #titleWrap h1, #startWrap input{
+body, .startWrap input{
     padding: 0;
     margin: 0;
 }
 
-#titleWrap h1, #startWrap input{
-    font-family: 'Jua', ;
+
+.titleWrap h1, .startWrap input{
+    font-family: 'Trade Winds', ;
 }
 
-#titleWrap h1, #startWrap{
+.titleWrap h1, .startWrap{
     text-align: center;
 }
 
-#titleWrap h1{
+.titleWrap h1{
     padding-top: 300px;
-    font-size:50px;
-    color: #424874;
+    padding-bottom: 20px;
+    font-size:40px;
+    color: #353866;
 }
 
-#startWrap input{
+.startWrap input{
     margin-top: 20px;
     font-size: 30px;
-    color: #424874;
+    color: #353866;
     width: 170px;
     height:70px;
     border-radius: 20px;
-    background-color: #dcd6f7;
-    border: 2px solid #dcd6f7;
-}
-
-
-canvas {
-    margin-top: 180px;
+    background-color: #D9D4CF;
+    border: 2px solid #D9D4CF;
 }

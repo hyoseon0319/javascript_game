@@ -31,6 +31,7 @@ for (var c = 0; c < brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
 
 function keyDownHandler(e) { // 키를 누르면
     if (e.keyCode == 39) { // 오른쪽 방향키
@@ -50,6 +51,13 @@ function keyUpHandler(e) { // 키에서 손을 떼면
     }
 }
 
+
+function mouseMoveHandler(e) {
+    var relativeX = e.clientX - canvas.offsetLeft;
+    if(relativeX > 0 && relativeX < canvas.width) {
+        paddleX = relativeX - paddleWidth/2;
+    }
+}
 
 function collisionDetection() { // 벽돌 충돌 감지 함수
     for (var c = 0; c < brickColumnCount; c++) {
@@ -72,7 +80,7 @@ function collisionDetection() { // 벽돌 충돌 감지 함수
 }
 
 function drawScore(){
-    ctx.font = "20px godic";
+    ctx.font = "20px jua";
     ctx.loc = "center";
     ctx.fillStyle = "#f6ea8c";
     ctx.fillText("Score: "+score, 8, 20);

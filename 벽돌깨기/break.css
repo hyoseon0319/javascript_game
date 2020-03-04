@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
 
 /* 게임 시작 화면 */
 body {
@@ -14,7 +13,7 @@ body, .startWrap input{
 
 
 .titleWrap h1, .startWrap input{
-    font-family: 'Trade Winds', ;
+    font-family: 'gugi','Yeon Sung','Jua';
 }
 
 .titleWrap h1, .startWrap{

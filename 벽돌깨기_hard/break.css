@@ -1,0 +1,39 @@
+
+/* 게임 시작 화면 */
+body {
+    background-color: #ABD0CE;
+    overflow: hidden;
+}
+
+
+body, .startWrap input{
+    padding: 0;
+    margin: 0;
+}
+
+
+.titleWrap h1, .startWrap input{
+    font-family: 'gugi','Yeon Sung','Jua';
+}
+
+.titleWrap h1, .startWrap{
+    text-align: center;
+}
+
+.titleWrap h1{
+    padding-top: 300px;
+    padding-bottom: 20px;
+    font-size:40px;
+    color: #353866;
+}
+
+.startWrap input{
+    margin-top: 20px;
+    font-size: 30px;
+    color: #353866;
+    width: 170px;
+    height:70px;
+    border-radius: 20px;
+    background-color: #D9D4CF;
+    border: 2px solid #D9D4CF;
+}

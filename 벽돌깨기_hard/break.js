@@ -3,21 +3,21 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
 var y = canvas.height - 30;
-var dx = 2;
-var dy = -2;
-var ballRadius = 10;
-var paddleHeight = 10;
-var paddleWidth = 75;
+var dx = 7;
+var dy = -7;
+var ballRadius = 13;
+var paddleHeight = 17;
+var paddleWidth = 110;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false; // 버튼을 누르는 변수 선언
 var leftPressed = false;
-var brickRowCount = 3;
-var brickColumnCount = 5;
+var brickRowCount = 6;
+var brickColumnCount = 7;
 var brickWidth = 75;
 var brickHeight = 20;
-var brickPadding = 10;
+var brickPadding = 5;
 var brickOffsetTop = 30;
-var brickOffsetLeft = 30;
+var brickOffsetLeft = 20;
 var score = 0;
 var lives = 3;
 
@@ -120,6 +120,8 @@ function drawPaddle() { // 패들 그리기
 }
 
 
+
+
 function drawBricks() { // 벽돌 생성
     for (var c = 0; c < brickColumnCount; c++) {
         for (var r = 0; r < brickRowCount; r++) {
@@ -169,8 +171,8 @@ function draw() { // 공을 움직이는 코드
             else {
                 x = canvas.width / 2;
                 y = canvas.height - 30;
-                dx = 2;
-                dy = -2;
+                dx = 7;
+                dy = -7;
                 paddleX = (canvas.width - paddleWidth) / 2;
             }
         }
@@ -178,11 +180,11 @@ function draw() { // 공을 움직이는 코드
 
     // 매 갱신마다 공이 새 위치에 그려짐
 
-    if (rightPressed && paddleX < canvas.width - paddleWidth) { // 우측 5px 움직임
-        paddleX += 5;
+    if (rightPressed && paddleX < canvas.width - paddleWidth) { // 우측 10px 움직임
+        paddleX += 10;
     }
-    else if (leftPressed && paddleX > 0) { // 좌측 5px 움직임
-        paddleX -= 5;
+    else if (leftPressed && paddleX > 0) { // 좌측 10px 움직임
+        paddleX -= 10;
     }
 
     x += dx;
